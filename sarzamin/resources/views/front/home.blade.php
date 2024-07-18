@@ -11,10 +11,15 @@
         const leftImage = document.getElementById('left-image');
         const rightImage = document.getElementById('right-image');
 
+        let blockLeftSmall = "{{ asset('Impact/assets/img/seed/blocks-left-small.png') }}",
+            blocRightSmall = "{{ asset('Impact/assets/img/seed/blocks-right-small.png') }}",
+            inFrontLaptop = "{{ asset('/Impact/assets/img/seed/inf-ront-of-laptop@5x-1024x1007.png') }}",
+            imgage13 = "{{ asset('Impact/assets/img/seed/image13-1.png') }}";
+
         const images = {
-            'about-us': { left: '/Impact/assets/img/seed/image13-1.png', right: '/Impact/assets/img/seed/blocks-left-small.png' },
-            'latest-news': { left: '/Impact/assets/img/seed/blocks-right-small.png', right: '/Impact/assets/img/seed/inf-ront-of-laptop@5x-1024x1007.png' },
-            'call-to-action': { left: '/Impact/assets/img/seed/blocks-left-small.png', right: '/Impact/assets/img/seed/image13-1.png' },
+            'about-us': { left: imgage13, right: blockLeftSmall },
+            'latest-news': { left: blocRightSmall, right: inFrontLaptop },
+            'call-to-action': { left: blockLeftSmall, right: imgage13 },
         };
 
         const updateImages = (sectionId) => {

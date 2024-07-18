@@ -6,8 +6,8 @@
     <meta content="" name="description">
 
      <!-- Favicons -->
-    <link href="{{ $favicon ?: "/general/img/favicon-16x16.png" }}" rel="icon">
-    <link href="{{ $favicon ?: "/general/img/favicon-16x16.png" }}" rel="apple-touch-icon">
+    <link href="{{ $favicon ?: asset("/general/img/favicon-16x16.png") }}" rel="icon">
+    <link href="{{ $favicon ?: asset("/general/img/favicon-16x16.png") }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,28 +16,26 @@
 
     <!-- Vendor CSS Files -->
     @if (App::isLocale('en'))
-        <link href="/Impact/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ asset('/Impact/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     @else
-        <link href="/Impact/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet">
+        <link href="{{ asset('/Impact/assets/vendor/bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     @endif
     
-    {{-- <link href="/Impact/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> --}}
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="/Impact/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/Impact/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="/Impact/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css"> --}}
+    <link href="{{ asset('/Impact/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('/Impact/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/Impact/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     @if (App::isLocale('en'))
-        <link href="/Impact/assets/css/main.css" rel="stylesheet">
+        <link href="{{ asset('/Impact/assets/css/main.css') }}" rel="stylesheet">
     @else
-        <link href="/Impact/assets/css/main-rtl.css" rel="stylesheet">
+        <link href="{{ asset('/Impact/assets/css/main-rtl.css') }}" rel="stylesheet">
     @endif
-    <link href="/Impact/assets/css/icons/tabler-icons/tabler-icons.css" rel="stylesheet">
-    <link href="/general/flag-icons/css/flag-icons.min.css" rel="stylesheet">
+    <link href="{{ asset('/Impact/assets/css/icons/tabler-icons/tabler-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('/general/flag-icons/css/flag-icons.min.css') }}" rel="stylesheet">
 
     
 
