@@ -6,9 +6,11 @@ use App\Models\User;
 use App\Rules\ValidNationalCode;
 use App\Traits\AlertLiveComponent;
 use App\Traits\SmsTrait;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\ValidationException;
 use Livewire\Component;
 
 class LiveLogin extends Component
@@ -109,18 +111,28 @@ class LiveLogin extends Component
 
     public function login()
     {
-        $this->validate([
-            'email' => ['required', 'email' , 'exists:users,email'],
-            'password' => 'required'
-        ],[
-            // 'exists: :national_code '
-        ],[
-            'email' => __('global.email'),
-            'password' => __('global.password'),
-        ]);
- 
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            return redirect()->intended('/');
+        try {
+            $this->validate([
+                'email' => ['required', 'email' ],
+                'password' => 'required'
+            ],[
+                // 'exists: :national_code '
+            ],[
+                'email' => __('global.email'),
+                'password' => __('global.password'),
+            ]);
+     
+            if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+                return redirect()->intended('/');
+            }else{
+                $this->alert(__('messages.incorrect_login'))->error();
+            }
+
+        } catch (Exception $e) {
+            $this->alert($e->getMessage())->error();
+        } catch (ValidationException $e) {
+            $this->alert($e->getMessage())->error();
         }
+        
     }
 }

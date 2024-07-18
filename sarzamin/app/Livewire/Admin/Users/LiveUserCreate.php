@@ -134,7 +134,7 @@ class LiveUserCreate extends Component
 
         $this->createImage($user, 'avatar');
 
-        $user->assignRole($this->data['role'] ?? EnumUserRoles::TEACHER);
+        $user->assignRole($this->data['role'] ?? EnumUserRoles::USER);
         $selectedPermissions = collect($this->data['direct_permissions'])->map(function($value, $key){
             if($value)
                 return $key;
