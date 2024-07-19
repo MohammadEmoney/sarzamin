@@ -3079,3 +3079,8 @@ section {
   left: 1em;
   cursor: pointer;
 }
+
+figure img {
+  width: 100% !important;
+  height: auto !important;
+}
