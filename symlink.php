@@ -1,2 +1,2 @@
 <?php
-symlink("C:/xampp/htdocs/server-sarzamin/sarzamin/storage/app/public","C:/xampp/htdocs/server-sarzamin/storage");
+symlink("/home/sarzamin/public_html/sarzamin/storage/app/public","/home/sarzamin/public_html/storage");
