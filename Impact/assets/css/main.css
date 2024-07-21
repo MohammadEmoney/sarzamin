@@ -3042,3 +3042,10 @@ figure img {
   width: 100% !important;
   height: auto !important;
 }
+
+@media screen and (max-width: 600px) {
+  .fixed-image {
+    visibility: hidden;
+    display: none;
+  }
+}
