@@ -3048,4 +3048,14 @@ figure img {
     visibility: hidden;
     display: none;
   }
+  
+  .topbar .searchbox-container {
+    visibility: hidden;
+    display: none;
+  }
+
+  .topbar .contact-info {
+    visibility: hidden;
+    display: none;
+  }
 }

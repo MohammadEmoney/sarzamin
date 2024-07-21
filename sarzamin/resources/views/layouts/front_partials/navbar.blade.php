@@ -3,7 +3,7 @@
     <div class="container px-0">
         <div class="topbar">
             <div class="row align-items-center justify-content-center">
-                <div class="col-md-4">
+                <div class="col-md-4 contact-info">
                     <div class="topbar-info d-flex flex-wrap ms-2">
                         <a href="#" class="text-light me-4"><i class="fas fa-envelope text-white me-2"></i>{{ $settings['email'] ?? "Example@gmail.com" }}</a>
                         <a href="#" class="text-light"><i class="fas fa-phone-alt text-white me-2"></i><span dir="ltr">{{ $settings['phone'] ?? "+01234567890" }}</span></a>

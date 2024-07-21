@@ -1,4 +1,4 @@
-<div class="col-md-4 mt-2">
+<div class="col-md-4 mt-2 searchbox-container">
     <i class="ti ti-search text-white search-icon" id="searchIcon"></i>
     <form>
         <div class="search-box top-0">

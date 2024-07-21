@@ -8,6 +8,7 @@
         <span class="fa fa-bars text-primary"></span>
     </button>
     <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+        <livewire:front.components.live-mobile-search-bar />
         <div class="navbar-nav ms-auto">
             @foreach ($menu as $item)
                 @if($item->children()->count())
