@@ -1,6 +1,11 @@
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs">
-    <div class="page-header d-flex align-items-center" style="background-image: url({{ $background ?: "" }});">
+  <div class="page-header d-flex align-items-center" 
+      style="background-image: url({{ $background ?: "" }}); 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          ">
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center mt-5">
