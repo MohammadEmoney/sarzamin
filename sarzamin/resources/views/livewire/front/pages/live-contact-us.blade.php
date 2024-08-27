@@ -50,7 +50,7 @@
                                         <i class="bi bi-clock flex-shrink-0"></i>
                                         <div class="ms-2">
                                             <h4>{{ __('global.open_hours') }}:</h4>
-                                            <p>Sat-Thu: 9AM - 9PM</p>
+                                            <p>{{ __('global.sat') }}-{{ __('global.wed') }}: 9:00 - 19:00</p>
                                         </div>
                                     </div><!-- End Info Item -->
                                     </div>

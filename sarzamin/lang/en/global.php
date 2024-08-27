@@ -187,5 +187,7 @@ return [
     'general' => 'General',
     'background' => 'Background',
     'continue' => 'Continue',
+    'sat' => 'SAT',
+    'wed' => 'WED',
     '' => '',
 ];
