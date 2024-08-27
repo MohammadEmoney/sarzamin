@@ -38,10 +38,24 @@
           <p>
             {!! $settings['address'] ?? "" !!}
             <br>
-            <strong>{{ __('global.phone_number') }}:</strong> <span dir="ltr">{{ $settings['phone'] ?? "" }}</span><br>
-            <strong>{{ __('global.landlines') }}:</strong> <span dir="ltr">{{ $settings['landline'] ?? "" }}</span><br>
-            <strong>{{ __('global.landlines') }}:</strong> <span dir="ltr">{{ $settings['second_landline'] ?? "" }}</span><br>
-            <strong>{{ __('global.email') }}:</strong> {{ $settings['email'] ?? ""}}<br>
+            @if ($phone = $settings['phone'] ?? null)
+              <strong>{{ __('global.phone_number') }}:</strong> <span dir="ltr">{{ $phone }}</span><br>
+            @endif
+            @if ($landline = $settings['landline'] ?? null)
+              <strong>{{ __('global.landlines') }}:</strong> <span dir="ltr">{{ $landline }}</span><br>
+            @endif
+            @if ($secondLandline = $settings['second_landline'] ?? null)
+              <strong>{{ __('global.landlines') }}:</strong> <span dir="ltr">{{ $secondLandline }}</span><br>
+            @endif
+            @if ($thirdLandline = $settings['third_landline'] ?? null)
+              <strong>{{ __('global.landlines') }}:</strong> <span dir="ltr">{{ $thirdLandline }}</span><br>
+            @endif
+            @if ($forthLandline = $settings['forth_landline'] ?? null)
+              <strong>{{ __('global.landlines') }}:</strong> <span dir="ltr">{{ $forthLandline }}</span><br>
+            @endif
+            @if ($email = $settings['email'] ?? null)  
+              <strong>{{ __('global.email') }}:</strong> {{ $email }}<br>
+            @endif
           </p>
 
         </div>

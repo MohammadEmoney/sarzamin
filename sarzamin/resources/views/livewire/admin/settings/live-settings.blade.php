@@ -123,6 +123,35 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="third_landline" class="form-label">{{ __('global.third_landline') }}
+                                                                            *</label>
+                                                                        <input type="text" class="form-control" dir="ltr"
+                                                                            wire:model.live.debounce.800ms="data.third_landline" id="third_landline"
+                                                                            aria-describedby="textHelp" placeholder="{{ __('global.third_landline') }}">
+                                                                        <div>
+                                                                            @error('data.third_landline')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="forth_landline" class="form-label">{{ __('global.forth_landline') }}
+                                                                            *</label>
+                                                                        <input type="text" class="form-control" dir="ltr"
+                                                                            wire:model.live.debounce.800ms="data.forth_landline" id="forth_landline"
+                                                                            aria-describedby="textHelp" placeholder="{{ __('global.forth_landline') }}">
+                                                                        <div>
+                                                                            @error('data.forth_landline')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                 
                                                                 {{-- <div class="row">
                                                                     <div class="col-md-6 mb-3">
